@@ -5,6 +5,8 @@ describe('formedix home page', function() {
     expect(browser.getTitle()).toEqual('Clinical Metadata Repository | Clinical Trial Automation Software');
 
     element(by.css('rs-bullet[data-key="rs-72"]')).click();
+    
+    //browser.sleep(18000);
 
     const ryzeFeaturesArr = ["PREVIEW eCRFs",
     "ANNOTATE FORMS",
@@ -41,6 +43,8 @@ describe('formedix home page', function() {
     for (let i = 0; i < sortedArr.length; i++)
       console.log("sortedArr[" + i + "]: " + sortedArr[i]);
 
+    browser.actions().mouseMove(element(by.css('.ultimate-typed-main'))).perform();
+    
     for (let i = 0; i < sortedArr.length; i++) {
       //let featureDisplayed = false;
 
